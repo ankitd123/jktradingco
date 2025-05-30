@@ -2,16 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="J.K. Trading Co. - Supplier and Exporter of Machinery Spare Parts based in Mumbai." />
   <title>J.K. Trading Co.</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --primary-color: #2d3142;
-      --accent-color: #f25f5c;
-      --bg-light: #f4f4f4;
-      --text-dark: #2d3142;
+      --primary-color: #003366; /* deep navy blue */
+      --accent-color: #ff6f3c; /* warm orange */
+      --accent-color-dark: #e65a1b; /* darker accent for hover */
+      --bg-light: #f9fafb; /* very light gray */
+      --text-dark: #1a1a1a;
       --text-light: #ffffff;
     }
 
@@ -29,11 +30,17 @@
     }
 
     header {
-      background: url('https://images.unsplash.com/photo-1605902711622-cfb43c4437b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80') no-repeat center center/cover;
+      background: linear-gradient(
+          rgba(0, 51, 102, 0.75),
+          rgba(0, 51, 102, 0.75)
+        ),
+        url('https://images.unsplash.com/photo-1605902711622-cfb43c4437b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80')
+          no-repeat center center/cover;
       color: var(--text-light);
-      padding: 4rem 2rem;
+      padding: 5rem 2rem;
       text-align: center;
       position: relative;
+      box-shadow: 0 6px 15px rgba(0, 51, 102, 0.4);
     }
 
     header::after {
@@ -41,7 +48,7 @@
       position: absolute;
       top: 0; left: 0;
       width: 100%; height: 100%;
-      background: rgba(0, 0, 0, 0.6);
+      background: rgba(0, 0, 0, 0.3);
       z-index: 1;
     }
 
@@ -100,8 +107,13 @@
       background: #fff;
       border-radius: 12px;
       padding: 2rem;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
       margin-bottom: 2rem;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
     }
 
     .product-list {
@@ -110,22 +122,25 @@
       gap: 2rem;
       padding: 0;
     }
-    
+
     .product-card {
       list-style: none;
-      background: #fff;
+      background: #e8f0fe;
+      color: var(--primary-color);
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      box-shadow: 0 6px 15px rgba(0, 51, 102, 0.1);
       padding: 1rem;
       text-align: center;
-      transition: transform 0.3s ease;
+      transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
     }
-    
+
     .product-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      background: #ffefe6;
+      color: var(--accent-color-dark);
+      box-shadow: 0 10px 25px rgba(230, 90, 27, 0.25);
+      transform: translateY(-7px);
     }
-    
+
     .product-card img {
       width: 100%;
       height: 180px;
@@ -133,19 +148,57 @@
       border-radius: 8px;
       margin-bottom: 1rem;
     }
-    
+
     .product-card h3 {
       color: var(--primary-color);
       font-weight: 700;
       margin-bottom: 0.5rem;
     }
-    
+
     .product-card p {
       font-weight: 500;
       color: #555;
       font-size: 0.95rem;
     }
 
+    form label {
+      font-weight: 600;
+      display: block;
+      margin-bottom: 0.3rem;
+      color: var(--primary-color);
+    }
+
+    form input[type="text"],
+    form input[type="email"],
+    form input[type="tel"],
+    form textarea {
+      width: 100%;
+      padding: 0.6rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      font-family: 'Inter', sans-serif;
+      resize: vertical;
+    }
+
+    form button {
+      background-color: var(--accent-color);
+      border: none;
+      color: white;
+      padding: 0.7rem 1.7rem;
+      font-size: 1.1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 700;
+      transition: background-color 0.3s ease;
+      box-shadow: 0 4px 12px rgba(255, 111, 60, 0.5);
+    }
+
+    form button:hover {
+      background-color: var(--accent-color-dark);
+      box-shadow: 0 6px 18px rgba(230, 90, 27, 0.7);
+    }
 
     footer {
       text-align: center;
@@ -153,6 +206,7 @@
       color: var(--text-light);
       padding: 1.5rem;
       font-size: 0.9rem;
+      box-shadow: 0 -6px 15px rgba(0, 51, 102, 0.4);
     }
 
     a {
@@ -202,57 +256,66 @@
   </section>
 
   <section id="products">
-  <div class="card">
-    <h2>Our Products</h2>
-    <ul class="product-list">
-      <li class="product-card">
-        <img src="https://images.unsplash.com/photo-1581093588401-5930f4a1c11a?auto=format&fit=crop&w=400&q=80" alt="Nuts & Bolts" />
-        <h3>Nuts & Bolts</h3>
-        <p>Standard & Custom Sizes</p>
-      </li>
-      <li class="product-card">
-        <img src="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?auto=format&fit=crop&w=400&q=80" alt="Steel Plates" />
-        <h3>Steel Plates</h3>
-        <p>MS/SS, Laser-Cut Available</p>
-      </li>
-      <li class="product-card">
-        <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=400&q=80" alt="Steel Pipes" />
-        <h3>Steel Pipes</h3>
-        <p>Seamless, Welded</p>
-      </li>
-      <li class="product-card">
-        <img src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=400&q=80" alt="Ball Bearings" />
-        <h3>Industrial Ball Bearings</h3>
-        <p>Reliable & Durable</p>
-      </li>
-      <li class="product-card">
-        <img src="https://images.unsplash.com/photo-1549924231-f129b911e442?auto=format&fit=crop&w=400&q=80" alt="Fasteners & Anchors" />
-        <h3>Fasteners & Anchors</h3>
-        <p>High Strength Materials</p>
-      </li>
-      <li class="product-card">
-        <img src="https://images.unsplash.com/photo-1519397154539-491020f3b8e6?auto=format&fit=crop&w=400&q=80" alt="Machined Spare Parts" />
-        <h3>Machined Spare Parts</h3>
-        <p>CNC / Manual Precision</p>
-      </li>
-    </ul>
-  </div>
-</section>
-
+    <div class="card">
+      <h2>Our Products</h2>
+      <ul class="product-list">
+        <li class="product-card">
+          <img src="https://images.unsplash.com/photo-1562577309-2592ab84b1bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Nuts & Bolts" />
+          <h3>Nuts & Bolts</h3>
+          <p>Standard & Custom Sizes available for various industrial uses.</p>
+        </li>
+        <li class="product-card">
+          <img src="https://images.unsplash.com/photo-1590080877777-65d59888b8d6?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Steel Plates" />
+          <h3>Steel Plates</h3>
+          <p>MS/SS Plates, laser-cut to precise dimensions.</p>
+        </li>
+        <li class="product-card">
+          <img src="https://images.unsplash.com/photo-1602524818414-4d3ae841a08e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Steel Pipes" />
+          <h3>Steel Pipes</h3>
+          <p>Seamless & Welded pipes for industrial applications.</p>
+        </li>
+        <li class="product-card">
+          <img src="https://images.unsplash.com/photo-1556740769-90a2f6ba0a04?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Ball Bearings" />
+          <h3>Ball Bearings</h3>
+          <p>High quality industrial ball bearings for smooth operation.</p>
+        </li>
+        <li class="product-card">
+          <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Fasteners & Anchors" />
+          <h3>Fasteners & Anchors</h3>
+          <p>Durable fasteners and anchors for secure assembly.</p>
+        </li>
+        <li class="product-card">
+          <img src="https://images.unsplash.com/photo-1503602642458-232111445657?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Other Parts" />
+          <h3>Other Parts</h3>
+          <p>Wide variety of other essential machinery parts.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
 
   <section id="contact">
     <div class="card">
       <h2>Contact Us</h2>
-      <p><strong>Proprietor:</strong> [Your Name]</p>
-      <p><strong>Location:</strong> Mumbai, India</p>
-      <p><strong>Email:</strong> <a href="mailto:info@jktradingco.com">info@jktradingco.com</a></p>
-      <p><strong>Phone:</strong> +91-XXXXXXXXXX</p>
-      <p><strong>Website:</strong> <a href="https://username.github.io/jk-trading-co/">https://username.github.io/jk-trading-co/</a></p>
+      <form action="https://formspree.io/f/mrbkzkdl" method="POST">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Your full name" required />
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="Your email" required />
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="Your phone number" required />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Write your message here" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
     </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 J.K. Trading Co. | All rights reserved.</p>
+    &copy; 2025 J.K. Trading Co. | Mumbai, India
   </footer>
 </body>
 </html>
