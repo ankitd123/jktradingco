@@ -107,22 +107,45 @@
     .product-list {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
+      gap: 2rem;
+      padding: 0;
     }
-
-    .product-list li {
+    
+    .product-card {
       list-style: none;
-      background: var(--primary-color);
-      color: var(--text-light);
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       padding: 1rem;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+    
+    .product-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
       border-radius: 8px;
-      font-weight: 600;
-      transition: background 0.3s;
+      margin-bottom: 1rem;
+    }
+    
+    .product-card h3 {
+      color: var(--primary-color);
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    
+    .product-card p {
+      font-weight: 500;
+      color: #555;
+      font-size: 0.95rem;
     }
 
-    .product-list li:hover {
-      background: var(--accent-color);
-    }
 
     footer {
       text-align: center;
@@ -179,18 +202,43 @@
   </section>
 
   <section id="products">
-    <div class="card">
-      <h2>Our Products</h2>
-      <ul class="product-list">
-        <li>Nuts & Bolts (Standard & Custom Sizes)</li>
-        <li>Steel Plates (MS/SS, Laser-Cut Available)</li>
-        <li>Steel Pipes (Seamless, Welded)</li>
-        <li>Industrial Ball Bearings</li>
-        <li>Fasteners & Anchors</li>
-        <li>Machined Spare Parts (CNC / Manual)</li>
-      </ul>
-    </div>
-  </section>
+  <div class="card">
+    <h2>Our Products</h2>
+    <ul class="product-list">
+      <li class="product-card">
+        <img src="https://images.unsplash.com/photo-1581093588401-5930f4a1c11a?auto=format&fit=crop&w=400&q=80" alt="Nuts & Bolts" />
+        <h3>Nuts & Bolts</h3>
+        <p>Standard & Custom Sizes</p>
+      </li>
+      <li class="product-card">
+        <img src="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?auto=format&fit=crop&w=400&q=80" alt="Steel Plates" />
+        <h3>Steel Plates</h3>
+        <p>MS/SS, Laser-Cut Available</p>
+      </li>
+      <li class="product-card">
+        <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=400&q=80" alt="Steel Pipes" />
+        <h3>Steel Pipes</h3>
+        <p>Seamless, Welded</p>
+      </li>
+      <li class="product-card">
+        <img src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=400&q=80" alt="Ball Bearings" />
+        <h3>Industrial Ball Bearings</h3>
+        <p>Reliable & Durable</p>
+      </li>
+      <li class="product-card">
+        <img src="https://images.unsplash.com/photo-1549924231-f129b911e442?auto=format&fit=crop&w=400&q=80" alt="Fasteners & Anchors" />
+        <h3>Fasteners & Anchors</h3>
+        <p>High Strength Materials</p>
+      </li>
+      <li class="product-card">
+        <img src="https://images.unsplash.com/photo-1519397154539-491020f3b8e6?auto=format&fit=crop&w=400&q=80" alt="Machined Spare Parts" />
+        <h3>Machined Spare Parts</h3>
+        <p>CNC / Manual Precision</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
 
   <section id="contact">
     <div class="card">
