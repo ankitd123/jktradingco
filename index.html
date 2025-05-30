@@ -2,345 +2,105 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="J.K. Trading Co. - Supplier and Exporter of Machinery Spare Parts based in Mumbai." />
+  <meta name="keywords" content="machinery parts, spare parts, steel plates, steel pipes, nuts, bolts, ball bearings, Mumbai, exporter">
+  <meta name="author" content="J.K. Trading Co.">
+  <meta property="og:title" content="J.K. Trading Co." />
+  <meta property="og:description" content="Supplier and Exporter of Machinery Spare Parts based in Mumbai." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1605902711622-cfb43c4437b2" />
+  <meta property="og:url" content="https://jktradingco.github.io" />
   <title>J.K. Trading Co.</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary-color: #003366; /* deep navy blue */
-      --accent-color: #ff6f3c; /* warm orange */
-      --accent-color-dark: #e65a1b; /* darker accent for hover */
-      --bg-light: #f9fafb; /* very light gray */
-      --text-dark: #1a1a1a;
+      --primary-color: #2d3142;
+      --accent-color: #f25f5c;
+      --bg-light: #f4f4f4;
+      --text-dark: #2d3142;
       --text-light: #ffffff;
     }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: var(--bg-light);
-      color: var(--text-dark);
-      line-height: 1.6;
-    }
-
-    header {
-      background: linear-gradient(
-          rgba(0, 51, 102, 0.75),
-          rgba(0, 51, 102, 0.75)
-        ),
-        url('https://images.unsplash.com/photo-1605902711622-cfb43c4437b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80')
-          no-repeat center center/cover;
-      color: var(--text-light);
-      padding: 5rem 2rem;
-      text-align: center;
-      position: relative;
-      box-shadow: 0 6px 15px rgba(0, 51, 102, 0.4);
-    }
-
-    header::after {
-      content: "";
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0, 0, 0, 0.3);
-      z-index: 1;
-    }
-
-    header h1, header p, header nav {
-      position: relative;
-      z-index: 2;
-    }
-
-    header h1 {
-      font-size: 3rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-    }
-
-    header p {
-      font-size: 1.3rem;
-      margin-bottom: 1rem;
-    }
-
-    nav a {
-      color: var(--text-light);
-      margin: 0 1rem;
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: var(--accent-color);
-    }
-
-    section {
-      padding: 4rem 2rem;
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    section h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      color: var(--primary-color);
-      position: relative;
-    }
-
-    section h2::after {
-      content: "";
-      width: 50px;
-      height: 4px;
-      background: var(--accent-color);
-      position: absolute;
-      bottom: -10px;
-      left: 0;
-    }
-
-    .card {
-      background: #fff;
-      border-radius: 12px;
-      padding: 2rem;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
-      margin-bottom: 2rem;
-      transition: box-shadow 0.3s ease;
-    }
-
-    .card:hover {
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
-    }
-
-    .product-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-      padding: 0;
-    }
-
-    .product-card {
-      list-style: none;
-      background: #e8f0fe;
-      color: var(--primary-color);
-      border-radius: 12px;
-      box-shadow: 0 6px 15px rgba(0, 51, 102, 0.1);
-      padding: 1rem;
-      text-align: center;
-      transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .product-card:hover {
-      background: #ffefe6;
-      color: var(--accent-color-dark);
-      box-shadow: 0 10px 25px rgba(230, 90, 27, 0.25);
-      transform: translateY(-7px);
-    }
-
-    .product-card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 8px;
-      margin-bottom: 1rem;
-    }
-
-    .product-card h3 {
-      color: var(--primary-color);
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-    }
-
-    .product-card p {
-      font-weight: 500;
-      color: #555;
-      font-size: 0.95rem;
-    }
-
-    form label {
-      font-weight: 600;
-      display: block;
-      margin-bottom: 0.3rem;
-      color: var(--primary-color);
-    }
-
-    form input[type="text"],
-    form input[type="email"],
-    form input[type="tel"],
-    form textarea {
-      width: 100%;
-      padding: 0.6rem;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 1rem;
-      margin-bottom: 1rem;
-      font-family: 'Inter', sans-serif;
-      resize: vertical;
-    }
-
-    form button {
-      background-color: var(--accent-color);
-      border: none;
-      color: white;
-      padding: 0.7rem 1.7rem;
-      font-size: 1.1rem;
-      border-radius: 8px;
-      cursor: pointer;
-      font-weight: 700;
-      transition: background-color 0.3s ease;
-      box-shadow: 0 4px 12px rgba(255, 111, 60, 0.5);
-    }
-
-    form button:hover {
-      background-color: var(--accent-color-dark);
-      box-shadow: 0 6px 18px rgba(230, 90, 27, 0.7);
-    }
-
-    footer {
-      text-align: center;
-      background: var(--primary-color);
-      color: var(--text-light);
-      padding: 1.5rem;
-      font-size: 0.9rem;
-      box-shadow: 0 -6px 15px rgba(0, 51, 102, 0.4);
-    }
-
-    a {
-      color: var(--accent-color);
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', sans-serif; background-color: var(--bg-light); color: var(--text-dark); line-height: 1.6; }
+    header { background: url('https://images.unsplash.com/photo-1605902711622-cfb43c4437b2') no-repeat center center/cover; color: var(--text-light); padding: 4rem 2rem; text-align: center; position: relative; }
+    header::after { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); z-index: 1; }
+    header h1, header p, header nav { position: relative; z-index: 2; }
+    header h1 { font-size: 3rem; font-weight: 700; margin-bottom: 0.5rem; }
+    header p { font-size: 1.3rem; margin-bottom: 1rem; }
+    nav a { color: var(--text-light); margin: 0 1rem; text-decoration: none; font-weight: 600; transition: color 0.3s; }
+    nav a:hover { color: var(--accent-color); }
+    section { padding: 4rem 2rem; max-width: 1100px; margin: auto; }
+    section h2 { font-size: 2rem; margin-bottom: 1rem; color: var(--primary-color); position: relative; }
+    section h2::after { content: ""; width: 50px; height: 4px; background: var(--accent-color); position: absolute; bottom: -10px; left: 0; }
+    .card { background: #fff; border-radius: 12px; padding: 2rem; box-shadow: 0 4px 16px rgba(0,0,0,0.05); margin-bottom: 2rem; }
+    .product-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
+    .product-list li { list-style: none; background: var(--primary-color); color: var(--text-light); padding: 1rem; border-radius: 8px; font-weight: 600; transition: background 0.3s; }
+    .product-list li:hover { background: var(--accent-color); }
+    .testimonial { background: #fff; border-left: 4px solid var(--accent-color); padding: 1rem; margin-bottom: 1rem; border-radius: 8px; font-style: italic; }
+    footer { text-align: center; background: var(--primary-color); color: var(--text-light); padding: 1.5rem; font-size: 0.9rem; }
+    .overlay-loader { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(255,255,255,0.85); display: none; align-items: center; justify-content: center; font-size: 1.5rem; color: var(--primary-color); z-index: 9999; }
+    #form-status { margin-top: 1rem; font-weight: 600; color: var(--accent-color); }
+    .whatsapp-button { position: fixed; bottom: 20px; right: 20px; background: #25D366; color: white; border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 1.5rem; z-index: 10000; box-shadow: 0 4px 8px rgba(0,0,0,0.2); }
     @media (max-width: 768px) {
-      header h1 {
-        font-size: 2rem;
-      }
-      section {
-        padding: 2rem 1rem;
-      }
-      nav a {
-        display: inline-block;
-        margin: 0.5rem;
-      }
+      header h1 { font-size: 2rem; }
+      section { padding: 2rem 1rem; }
     }
   </style>
 </head>
 <body>
+  <div id="loader" class="overlay-loader">Sending...</div>
   <header>
     <h1>J.K. Trading Co.</h1>
     <p>Premium Supplier & Exporter of Machinery Spare Parts</p>
     <nav>
       <a href="#about">About</a>
       <a href="#products">Products</a>
+      <a href="#testimonials">Testimonials</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
-
-  <section id="about">
-    <div class="card">
-      <h2>About Us</h2>
-      <p>
-        Welcome to <strong>J.K. Trading Co.</strong>, a trusted supplier and exporter of top-quality machinery spare parts, based in Mumbai. We deal in a comprehensive range of products such as nuts, bolts, steel plates, pipes, and ball bearings that support diverse industrial operations across India and globally.
-      </p>
-      <p>
-        With years of experience, a commitment to quality, and a client-focused approach, our mission is to ensure industrial excellence through reliable, affordable, and efficient component solutions.
-      </p>
-    </div>
+  <section id="about" class="card">
+    <h2>About Us</h2>
+    <p>We are based in Mumbai and specialize in exporting machinery spare parts such as nuts, bolts, steel plates, steel pipes, ball bearings and more. Our goal is to provide quality products with timely delivery worldwide.</p>
   </section>
-
-  <section id="products">
-    <div class="card">
-      <h2>Our Products</h2>
-      <ul class="product-list">
-        <li class="product-card">
-          <img src="https://images.unsplash.com/photo-1562577309-2592ab84b1bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Nuts & Bolts" />
-          <h3>Nuts & Bolts</h3>
-          <p>Standard & Custom Sizes available for various industrial uses.</p>
-        </li>
-        <li class="product-card">
-          <img src="https://images.unsplash.com/photo-1590080877777-65d59888b8d6?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Steel Plates" />
-          <h3>Steel Plates</h3>
-          <p>MS/SS Plates, laser-cut to precise dimensions.</p>
-        </li>
-        <li class="product-card">
-          <img src="https://images.unsplash.com/photo-1602524818414-4d3ae841a08e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Steel Pipes" />
-          <h3>Steel Pipes</h3>
-          <p>Seamless & Welded pipes for industrial applications.</p>
-        </li>
-        <li class="product-card">
-          <img src="https://images.unsplash.com/photo-1556740769-90a2f6ba0a04?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Ball Bearings" />
-          <h3>Ball Bearings</h3>
-          <p>High quality industrial ball bearings for smooth operation.</p>
-        </li>
-        <li class="product-card">
-          <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Fasteners & Anchors" />
-          <h3>Fasteners & Anchors</h3>
-          <p>Durable fasteners and anchors for secure assembly.</p>
-        </li>
-        <li class="product-card">
-          <img src="https://images.unsplash.com/photo-1503602642458-232111445657?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Other Parts" />
-          <h3>Other Parts</h3>
-          <p>Wide variety of other essential machinery parts.</p>
-        </li>
-      </ul>
-    </div>
+  <section id="products" class="card">
+    <h2>Our Products</h2>
+    <ul class="product-list">
+      <li>Nuts & Bolts</li>
+      <li>Steel Plates</li>
+      <li>Steel Pipes</li>
+      <li>Ball Bearings</li>
+      <li>Anchors & Fasteners</li>
+      <li>Machined Parts</li>
+    </ul>
   </section>
-
-  <!-- <section id="contact">
-    <div class="card">
-      <h2>Contact Us</h2>
-      <form action="https://formspree.io/f/mrbkzkdl" method="POST">
-        <label for="name">Full Name</label>
-        <input type="text" id="name" name="name" placeholder="Your full name" required />
-
-        <label for="email">Email Address</label>
-        <input type="email" id="email" name="email" placeholder="Your email" required />
-
-        <label for="phone">Phone Number</label>
-        <input type="tel" id="phone" name="phone" placeholder="Your phone number" required />
-
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" placeholder="Write your message here" required></textarea>
-
-        <button type="submit">Send Message</button>
-      </form>
-    </div>
-  </section> -->
-
-  <section id="contact">
-    <div class="card">
-      <h2>Contact Us</h2>
-      <form id="contact-form" action="https://formspree.io/f/mrbkzkdl" method="POST">
-        <p><input type="text" name="name" placeholder="Your Name" required style="width: 100%; padding: 0.75rem; margin-bottom: 1rem; border-radius: 6px; border: 1px solid #ccc;"></p>
-        <p><input type="email" name="email" placeholder="Your Email" required style="width: 100%; padding: 0.75rem; margin-bottom: 1rem; border-radius: 6px; border: 1px solid #ccc;"></p>
-        <p><textarea name="message" placeholder="Your Message" required rows="5" style="width: 100%; padding: 0.75rem; border-radius: 6px; border: 1px solid #ccc;"></textarea></p>
-        <p><button type="submit" style="background: var(--accent-color); color: white; padding: 0.75rem 1.5rem; border: none; border-radius: 6px; font-weight: 600; cursor: pointer;">Send Message</button></p>
-        <div id="form-status"></div>
-      </form>
-    </div>
+  <section id="testimonials" class="card">
+    <h2>Testimonials</h2>
+    <div class="testimonial">“J.K. Trading Co. has been a reliable partner for all our industrial spare part needs. Highly recommended!” – A Client from Pune</div>
+    <div class="testimonial">“Excellent service, timely delivery and quality products.” – Manufacturer in Delhi</div>
   </section>
-
+  <section id="contact" class="card">
+    <h2>Contact Us</h2>
+    <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <p><input type="text" name="name" placeholder="Your Name" required style="width:100%;padding:0.75rem;margin-bottom:1rem;"></p>
+      <p><input type="email" name="email" placeholder="Your Email" required style="width:100%;padding:0.75rem;margin-bottom:1rem;"></p>
+      <p><textarea name="message" placeholder="Your Message" required rows="5" style="width:100%;padding:0.75rem;"></textarea></p>
+      <p><button type="submit" style="background: var(--accent-color); color: white; padding: 0.75rem 1.5rem; border: none; border-radius: 6px; font-weight: 600; cursor: pointer;">Send Message</button></p>
+      <div id="form-status"></div>
+    </form>
+  </section>
   <footer>
-    &copy; 2025 J.K. Trading Co. | Mumbai, India
+    <p>&copy; 2025 J.K. Trading Co. | All rights reserved.</p>
   </footer>
-
+  <a class="whatsapp-button" href="https://wa.me/919999999999" target="_blank" title="Chat with us on WhatsApp">💬</a>
   <script>
     const form = document.getElementById("contact-form");
     const status = document.getElementById("form-status");
     const loader = document.getElementById("loader");
-
     form.addEventListener("submit", async function (e) {
       e.preventDefault();
       loader.style.display = "flex";
       status.textContent = "";
-
       const data = new FormData(form);
       try {
         const response = await fetch(form.action, {
@@ -348,7 +108,6 @@
           body: data,
           headers: { 'Accept': 'application/json' }
         });
-
         loader.style.display = "none";
         if (response.ok) {
           status.textContent = "Thanks! Your message has been sent.";
