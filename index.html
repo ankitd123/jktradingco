@@ -33,14 +33,87 @@
     section h2 { font-size: 2rem; margin-bottom: 1rem; color: var(--primary-color); position: relative; }
     section h2::after { content: ""; width: 50px; height: 4px; background: var(--accent-color); position: absolute; bottom: -10px; left: 0; }
     .card { background: #fff; border-radius: 12px; padding: 2rem; box-shadow: 0 4px 16px rgba(0,0,0,0.05); margin-bottom: 2rem; }
-    .product-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
-    .product-list li { list-style: none; background: var(--primary-color); color: var(--text-light); padding: 1rem; border-radius: 8px; font-weight: 600; transition: background 0.3s; }
-    .product-list li:hover { background: var(--accent-color); }
-    .testimonial { background: #fff; border-left: 4px solid var(--accent-color); padding: 1rem; margin-bottom: 1rem; border-radius: 8px; font-style: italic; }
-    footer { text-align: center; background: var(--primary-color); color: var(--text-light); padding: 1.5rem; font-size: 0.9rem; }
-    .overlay-loader { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(255,255,255,0.85); display: none; align-items: center; justify-content: center; font-size: 1.5rem; color: var(--primary-color); z-index: 9999; }
-    #form-status { margin-top: 1rem; font-weight: 600; color: var(--accent-color); }
-    .whatsapp-button { position: fixed; bottom: 20px; right: 20px; background: #25D366; color: white; border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 1.5rem; z-index: 10000; box-shadow: 0 4px 8px rgba(0,0,0,0.2); }
+    .product-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      list-style: none;
+      padding: 0;
+    }
+    .product-list li {
+      background: var(--primary-color);
+      color: var(--text-light);
+      padding: 1rem;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: background 0.3s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .product-list li:hover {
+      background: var(--accent-color);
+      cursor: pointer;
+    }
+    .product-list img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 0.5rem;
+      object-fit: cover;
+      max-height: 150px;
+    }
+    .testimonial {
+      background: #fff;
+      border-left: 4px solid var(--accent-color);
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+      font-style: italic;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    footer {
+      text-align: center;
+      background: var(--primary-color);
+      color: var(--text-light);
+      padding: 1.5rem;
+      font-size: 0.9rem;
+    }
+    .overlay-loader {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(255,255,255,0.85);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: var(--primary-color);
+      z-index: 9999;
+    }
+    #form-status {
+      margin-top: 1rem;
+      font-weight: 600;
+      color: var(--accent-color);
+    }
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
+      color: white;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-size: 1.5rem;
+      z-index: 10000;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
     @media (max-width: 768px) {
       header h1 { font-size: 2rem; }
       section { padding: 2rem 1rem; }
@@ -66,12 +139,30 @@
   <section id="products" class="card">
     <h2>Our Products</h2>
     <ul class="product-list">
-      <li>Nuts & Bolts</li>
-      <li>Steel Plates</li>
-      <li>Steel Pipes</li>
-      <li>Ball Bearings</li>
-      <li>Anchors & Fasteners</li>
-      <li>Machined Parts</li>
+      <li>
+        <img src="https://images.unsplash.com/photo-1581090700227-5e0b1c2b6a8e?auto=format&fit=crop&w=250&q=80" alt="Nuts & Bolts" />
+        Nuts & Bolts
+      </li>
+      <li>
+        <img src="https://images.unsplash.com/photo-1590080877777-8c15d4b7f58c?auto=format&fit=crop&w=250&q=80" alt="Steel Plates" />
+        Steel Plates
+      </li>
+      <li>
+        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=250&q=80" alt="Steel Pipes" />
+        Steel Pipes
+      </li>
+      <li>
+        <img src="https://images.unsplash.com/photo-1581093588401-4d94fc6d2a9a?auto=format&fit=crop&w=250&q=80" alt="Ball Bearings" />
+        Ball Bearings
+      </li>
+      <li>
+        <img src="https://images.unsplash.com/photo-1576502200916-1a6d7aabdb82?auto=format&fit=crop&w=250&q=80" alt="Anchors & Fasteners" />
+        Anchors & Fasteners
+      </li>
+      <li>
+        <img src="https://images.unsplash.com/photo-1602526219740-4e04e3d12a7a?auto=format&fit=crop&w=250&q=80" alt="Machined Parts" />
+        Machined Parts
+      </li>
     </ul>
   </section>
   <section id="testimonials" class="card">
@@ -81,44 +172,57 @@
   </section>
   <section id="contact" class="card">
     <h2>Contact Us</h2>
-    <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    <form id="contact-form" action="https://formspree.io/f/mrbkzkdl" method="POST">
       <p><input type="text" name="name" placeholder="Your Name" required style="width:100%;padding:0.75rem;margin-bottom:1rem;"></p>
       <p><input type="email" name="email" placeholder="Your Email" required style="width:100%;padding:0.75rem;margin-bottom:1rem;"></p>
       <p><textarea name="message" placeholder="Your Message" required rows="5" style="width:100%;padding:0.75rem;"></textarea></p>
-      <p><button type="submit" style="background: var(--accent-color); color: white; padding: 0.75rem 1.5rem; border: none; border-radius: 6px; font-weight: 600; cursor: pointer;">Send Message</button></p>
+      <p><button type="submit" style="background: var(--accent-color); color: white; border:none; padding:0.75rem 2rem; font-weight:600; border-radius:6px; cursor:pointer;">Send Message</button></p>
       <div id="form-status"></div>
     </form>
   </section>
   <footer>
-    <p>&copy; 2025 J.K. Trading Co. | All rights reserved.</p>
+    &copy; 2025 J.K. Trading Co. | Mumbai, India
   </footer>
-  <a class="whatsapp-button" href="https://wa.me/919999999999" target="_blank" title="Chat with us on WhatsApp">💬</a>
+  <a href="https://wa.me/919324000343" class="whatsapp-button" target="_blank" aria-label="WhatsApp Chat">&#x1F4AC;</a>
+
   <script>
-    const form = document.getElementById("contact-form");
-    const status = document.getElementById("form-status");
-    const loader = document.getElementById("loader");
-    form.addEventListener("submit", async function (e) {
-      e.preventDefault();
-      loader.style.display = "flex";
-      status.textContent = "";
+    const form = document.getElementById('contact-form');
+    const loader = document.getElementById('loader');
+    const status = document.getElementById('form-status');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+      loader.style.display = 'flex';
+      status.textContent = '';
       const data = new FormData(form);
-      try {
-        const response = await fetch(form.action, {
-          method: form.method,
-          body: data,
-          headers: { 'Accept': 'application/json' }
-        });
-        loader.style.display = "none";
+
+      fetch(form.action, {
+        method: 'POST',
+        body: data,
+        headers: {
+          'Accept': 'application/json'
+        }
+      }).then(response => {
+        loader.style.display = 'none';
         if (response.ok) {
-          status.textContent = "Thanks! Your message has been sent.";
+          status.style.color = 'green';
+          status.textContent = 'Thank you for contacting us! We will get back to you soon.';
           form.reset();
         } else {
-          status.textContent = "Oops! Something went wrong.";
+          response.json().then(data => {
+            if (Object.hasOwn(data, 'errors')) {
+              status.textContent = data["errors"].map(error => error["message"]).join(", ");
+            } else {
+              status.textContent = 'Oops! There was a problem submitting your form';
+            }
+            status.style.color = 'red';
+          });
         }
-      } catch (error) {
-        loader.style.display = "none";
-        status.textContent = "Network error. Please try again.";
-      }
+      }).catch(() => {
+        loader.style.display = 'none';
+        status.style.color = 'red';
+        status.textContent = 'Oops! There was a problem submitting your form';
+      });
     });
   </script>
 </body>
