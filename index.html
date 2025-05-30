@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="J.K. Trading Co. - Supplier and Exporter of Machinery Spare Parts based in Mumbai." />
   <title>J.K. Trading Co.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -12,53 +13,92 @@
       box-sizing: border-box;
     }
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Roboto', sans-serif;
       line-height: 1.6;
       color: #333;
+      background-color: #f9f9f9;
     }
     header {
-      background: #003f5c;
+      background: linear-gradient(to right, #003f5c, #2f4b7c);
       color: #fff;
-      padding: 1rem 2rem;
+      padding: 2rem 1rem;
       text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      font-size: 1.2rem;
     }
     nav {
-      margin-top: 0.5rem;
+      margin-top: 1rem;
     }
     nav a {
       color: #fff;
       margin: 0 1rem;
       text-decoration: none;
+      font-weight: bold;
+      padding: 0.3rem 0.6rem;
+      border-radius: 5px;
+      transition: background 0.3s;
     }
     nav a:hover {
-      text-decoration: underline;
+      background-color: rgba(255, 255, 255, 0.2);
     }
     section {
-      padding: 2rem;
+      padding: 3rem 1rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #003f5c;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 0.5rem;
     }
     #about, #products, #contact {
-      background: #f4f4f4;
-      margin-bottom: 1rem;
-      border-radius: 5px;
-    }
-    h2 {
-      color: #003f5c;
-      margin-bottom: 1rem;
+      background: #ffffff;
+      margin-bottom: 2rem;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     }
     ul {
-      list-style-type: disc;
-      padding-left: 2rem;
+      list-style-type: none;
+      padding-left: 0;
+    }
+    ul li {
+      background: url('https://img.icons8.com/ios-filled/15/003f5c/checkmark.png') no-repeat left center;
+      padding-left: 25px;
+      margin-bottom: 0.5rem;
+    }
+    a {
+      color: #0077cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
     }
     footer {
       text-align: center;
       background: #003f5c;
       color: #fff;
       padding: 1rem;
+      font-size: 0.9rem;
     }
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      section {
+        padding: 2rem 1rem;
+      }
       nav a {
-        display: block;
-        margin: 0.5rem 0;
+        display: inline-block;
+        margin: 0.5rem;
       }
     }
   </style>
@@ -77,22 +117,22 @@
   <section id="about">
     <h2>About Us</h2>
     <p>
-      Welcome to <strong>J.K. Trading Co.</strong>, a trusted name in the supply and export of high-quality machinery spare parts.
-      Based in Mumbai, we specialize in providing a wide range of industrial products including nuts, bolts, steel plates, steel pipes,
-      ball bearings, and more. With years of experience in the industry, we are committed to delivering top-notch products to our clients
-      across India and internationally.
+      Welcome to <strong>J.K. Trading Co.</strong>, your reliable partner for premium machinery spare parts. Located in Mumbai, we offer top-grade industrial components including nuts, bolts, steel plates, steel pipes, and ball bearings. With a reputation built on quality, timely delivery, and competitive pricing, we cater to clients across India and abroad.
+    </p>
+    <p>
+      Our mission is to supply industries with the components they need to keep their machines running smoothly. We pride ourselves on our deep product knowledge and responsive customer service.
     </p>
   </section>
 
   <section id="products">
     <h2>Our Products</h2>
     <ul>
-      <li>Nuts & Bolts</li>
-      <li>Steel Plates</li>
-      <li>Steel Pipes</li>
-      <li>Ball Bearings</li>
-      <li>Industrial Fasteners</li>
-      <li>Custom Spare Parts (on request)</li>
+      <li>Nuts & Bolts (Various Sizes & Grades)</li>
+      <li>Steel Plates (MS, SS, Custom Cuts)</li>
+      <li>Steel Pipes (Seamless & Welded)</li>
+      <li>Ball Bearings (Industrial Grades)</li>
+      <li>Industrial Fasteners (Custom & Standard)</li>
+      <li>Precision Machined Spare Parts</li>
     </ul>
   </section>
 
@@ -102,7 +142,7 @@
     <p><strong>Location:</strong> Mumbai, India</p>
     <p><strong>Email:</strong> <a href="mailto:info@jktradingco.com">info@jktradingco.com</a></p>
     <p><strong>Phone:</strong> +91-XXXXXXXXXX</p>
-    <p><strong>GitHub Page:</strong> <a href="https://username.github.io">https://username.github.io</a></p>
+    <p><strong>Website:</strong> <a href="https://username.github.io/jk-trading-co/">https://username.github.io/jk-trading-co/</a></p>
   </section>
 
   <footer>
