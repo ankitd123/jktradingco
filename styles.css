@@ -149,7 +149,7 @@ nav ul li a:hover {
   position: absolute;
   content: "";
   top: 0; left: 0; right: 0; bottom: 0;
-  z-index: 1;
+  z-index: -1;
 }
 #about {
   position: relative;
@@ -191,7 +191,7 @@ nav ul li a:hover {
   height: 150vh; /* taller: 1.5 times viewport */
   margin-top: -50vh; /* pull it up by half viewport height */
   position: relative;
-  z-index: 0; /* make sure it's behind text */
+  z-index: -2; /* make sure it's behind text */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -209,7 +209,7 @@ nav ul li a:hover {
   justify-content: center;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
   position: relative;
-  z-index: 0; /* behind about and products */
+  z-index: -2; /* behind about and products */
 }
 #about, .rellax-wrapper, #products {
   margin-bottom: 0;
