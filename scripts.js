@@ -5,16 +5,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
 
   if (navigator.connection) {
-    console.log("Test AD")
     console.log("Effective Connection Type:", navigator.connection.effectiveType);
     console.log("Estimated Downlink (Mbps):", navigator.connection.downlink);
     console.log("RTT (ms):", navigator.connection.rtt);
     console.log("Save Data:", navigator.connection.saveData);
-    console.log("Test AD ---")
   } else {
-    console.log("Test AD")
     console.log("Network Information API not supported.");
-    console.log("Test AD ----")
   }
 
   if (connection) {
@@ -22,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const saveData = connection.saveData;
 
     // Match for slow networks or data-saver mode
-    const isLowBandwidth = saveData || ['slow-2g', '2g', '3g', '4g'].includes(type);
+    const isLowBandwidth = saveData || ['slow-2g', '2g', '3g'].includes(type);
 
     if (isLowBandwidth) {
       document.querySelectorAll('img[data-low]').forEach(img => {
