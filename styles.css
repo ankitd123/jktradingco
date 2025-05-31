@@ -146,10 +146,15 @@ nav ul li a:hover {
 /* Unique background images per section */
 #about::before {
   background-image: url('images/about_us_1.jpg');
+  background-color: rgba(255, 255, 255, 0.3); /* overlay color */
+  background-blend-mode: lighten; /* or overlay, multiply, etc */
   position: absolute;
   content: "";
   top: 0; left: 0; right: 0; bottom: 0;
   z-index: -1;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 #about {
   position: relative;
