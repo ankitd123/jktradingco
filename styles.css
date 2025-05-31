@@ -86,6 +86,8 @@ nav ul li a:hover {
   z-index: 0;
   width: 100vw;
   box-sizing: border-box;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
 }
 .full-section > * {
   max-width: 80vw;
@@ -121,7 +123,7 @@ html {
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
-  scroll-padding-top: 40px;
+  scroll-padding-top: 35px;
 }
 section {
   margin-bottom: 4rem;
