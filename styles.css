@@ -92,12 +92,20 @@ nav ul li {
   font-weight: 600;
 }
 nav ul li a {
-  color: white;
+  background-color: #f4d35e;
+  color: #0d3b66;
+  padding: 0.4rem 0.9rem;
+  border-radius: 6px;
   font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
+
 nav ul li a:hover {
-  color: #f4d35e;
+  background-color: #ffd84d;
+  color: #0a2a4c;
 }
+
 .full-section {
   min-height: 100vh;
   display: flex;
@@ -341,5 +349,17 @@ footer {
   .full-section {
     padding: 3rem 1rem;
     min-height: 100vh;
+  }
+  nav ul li a {
+    background: none;
+    color: white;
+    padding: 0.2rem 0.5rem;
+    font-weight: 500;
+    box-shadow: none;
+    border-radius: 0;
+  }
+  nav ul li a:hover {
+    background: none;
+    color: #f4d35e;
   }
 }
