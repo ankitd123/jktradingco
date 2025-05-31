@@ -7,6 +7,33 @@
   <meta name="description" content="J.K. Trading Co. supplies and exports machinery spare parts including nuts, bolts, steel plates, pipes, ball bearings from Mumbai." />
   <link rel="canonical" href="https://jktradingco.github.io" />
 
+  <script>
+  const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+
+  if (connection) {
+    console.log("Connection type:", connection.type || "unknown");
+    console.log("Effective connection type:", connection.effectiveType || "unknown");
+    console.log("Downlink (Mbps):", connection.downlink || "unknown");
+    console.log("Save-Data enabled:", connection.saveData ? "Yes" : "No");
+
+    // Optionally: Load low-res images if needed
+    const isLowBandwidth = connection.saveData || ['slow-2g', '2g', '3g', '4g'].includes(connection.effectiveType);
+    if (isLowBandwidth) {
+      console.log("Low bandwidth detected, using low-res images.");
+      document.querySelectorAll('img[data-low]').forEach(img => {
+        if (img.dataset.low) {
+          img.src = img.dataset.low;
+        }
+      });
+    } else {
+      console.log("High bandwidth detected, using high-res images.");
+    }
+  } else {
+    console.log("Network Information API not supported in this browser.");
+  }
+</script>
+
+
   <!-- Link to external CSS -->
   <link rel="stylesheet" href="styles.css?v=1.0.2">
 
