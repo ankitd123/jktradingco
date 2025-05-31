@@ -182,8 +182,8 @@ p {
   box-shadow: 0 8px 20px rgb(244 211 94 / 0.4);
 }
 .product-list li img {
-  width: 150px;
-  height: 150px;
+  width: 180px;
+  height: 180px;
   object-fit: cover;
   margin-bottom: 0.75rem;
   transition: transform 0.3s ease;
