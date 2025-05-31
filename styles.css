@@ -175,7 +175,7 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 180px;
+  width: 220px;
   box-sizing: border-box;
 }
 .product-list li:hover {
