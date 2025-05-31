@@ -9,6 +9,9 @@ body {
   color: #222;
   line-height: 1.6;
   scroll-behavior: smooth;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
 }
 a {
   color: #1a73e8;
@@ -123,12 +126,17 @@ p {
 
 /* Products */
 .product-list {
-  display: grid;
   grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
   gap: 1.5rem;
   padding: 0;
-  margin: 0;
   list-style: none;
+  margin: 0 auto;
+  max-width: 100vw;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
 }
 .product-list li {
   background: #fef9e7;
@@ -148,11 +156,12 @@ p {
 }
 .product-list li img {
   max-width: 100%;
-  height: 140px;
+  height: auto;
   object-fit: contain;
   margin-bottom: 0.75rem;
   transition: transform 0.3s ease;
   border-radius: 6px;
+  display: block;
 }
 .product-list li:hover img {
   transform: scale(1.05);
