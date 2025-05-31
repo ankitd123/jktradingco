@@ -112,13 +112,9 @@ nav ul li a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
-  margin: 0;
+  padding: 2rem 1rem;
   position: relative;
   overflow: hidden;
-  z-index: 0;
-  width: 100vw;
-  box-sizing: border-box;
   scroll-snap-align: start;
   scroll-snap-stop: always;
 }
@@ -160,12 +156,13 @@ nav ul li a:hover {
 
 /* Parallax feature css*/
 .rellax-wrapper {
-  position: relative;
-  height: 60vh;
-  overflow: hidden;
+  height: 100vh; /* Instead of 60vh */
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+  position: relative;
+  margin-top: 0;
 }
 
 .parallax-layer {
@@ -179,6 +176,16 @@ nav ul li a:hover {
   justify-content: center;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
+#about, .rellax-wrapper {
+  margin-bottom: 0;
+}
+
+/* --test-- */
+#about, .rellax-wrapper, #products {
+  outline: 2px solid red;
+}
+
+/* ------ */
 
 
 html {
