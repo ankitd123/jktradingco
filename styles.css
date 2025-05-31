@@ -26,6 +26,17 @@ main, header, footer {
   margin: 0;
   box-sizing: border-box;
 }
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+}
+.logo img {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+/* Logo end */
 a {
   color: #1a73e8;
   text-decoration: none;
