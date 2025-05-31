@@ -74,62 +74,54 @@ nav ul li a:hover {
   color: #f4d35e;
 }
 .full-section {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-    margin: 0;
-    position: relative;
-    overflow: hidden;
-    z-index: 0;
-    width: 100vw;
-    box-sizing: border-box;
-  }
-
-  .full-section > * {
-    max-width: 80vw;
-    width: 100%;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    box-sizing: border-box;
-  }
-
-
-  .full-section::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    opacity: 0.38;
-    z-index: -1;
-  }
-
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  width: 100vw;
+  box-sizing: border-box;
+}
+.full-section > * {
+  max-width: 80vw;
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  box-sizing: border-box;
+}
+.full-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.38;
+  z-index: -1;
+}
 /* Unique background images per section */
 #about::before {
   background-image: url('images/about_us_1.jpg');
 }
-
 #products::before {
   background-image: url('images/products.jpg');
 }
-
 #contact::before {
   background-image: url('images/contact_us.jpg');
 }
-
 html {
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
 }
-
 section {
   margin-bottom: 4rem;
 }
@@ -145,7 +137,6 @@ p {
   font-size: 1.1rem;
   color: #444;
 }
-
 /* Products */
 .product-list {
   grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
@@ -158,7 +149,6 @@ p {
   flex-wrap: wrap;
   justify-content: center;
 }
-
 .product-list li {
   background: #fef9e7;
   border: 2px solid #f4d35e;
@@ -171,14 +161,16 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 180px;
+  box-sizing: border-box;
 }
 .product-list li:hover {
   box-shadow: 0 8px 20px rgb(244 211 94 / 0.4);
 }
 .product-list li img {
-  max-width: 100%;
-  height: auto;
-  object-fit: contain;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
   margin-bottom: 0.75rem;
   transition: transform 0.3s ease;
   border-radius: 6px;
@@ -193,13 +185,6 @@ p {
   font-size: 1.1rem;
   margin-top: auto;
 }
-
-.product-list img {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-}
-
 /* Contact form */
 form {
   display: flex;
@@ -236,14 +221,12 @@ button {
 button:hover, button:focus {
   background: #e1c64a;
 }
-
 /* Status message */
 #form-status {
   margin-top: 0.5rem;
   font-weight: 600;
   color: green;
 }
-
 /* Footer */
 footer {
   text-align: center;
@@ -252,7 +235,6 @@ footer {
   color: white;
   font-size: 0.9rem;
 }
-
 /* WhatsApp floating button */
 .whatsapp-button {
   position: fixed;
@@ -275,7 +257,6 @@ footer {
 .whatsapp-button:hover {
   background-color: #1ebe57;
 }
-
 /* Loader overlay */
 #loader {
   position: fixed;
@@ -304,7 +285,6 @@ footer {
   0% { transform: rotate(0deg);}
   100% { transform: rotate(360deg);}
 }
-
 /* Fade in animations */
 .fade-in {
   opacity: 0;
@@ -320,7 +300,6 @@ footer {
     transform: translateY(20px);
   }
 }
-
 /* Responsive */
 @media (max-width: 600px) {
   header {
@@ -330,5 +309,9 @@ footer {
   nav ul {
     flex-wrap: wrap;
     gap: 1rem;
+  }
+  .full-section {
+    padding: 3rem 1rem;
+    min-height: auto;
   }
 }
