@@ -65,6 +65,7 @@ main {
   justify-content: center;
   padding: 3rem 2rem;
   scroll-snap-align: start;
+  background: white; /* Optional: Keep backgrounds unified */
 }
 
 html {
@@ -87,17 +88,6 @@ h2 {
 p {
   font-size: 1.1rem;
   color: #444;
-}
-/* Cards */
-.card {
-  background: white;
-  border-radius: 8px;
-  padding: 1.5rem;
-  box-shadow: 0 4px 10px rgb(13 59 102 / 0.1);
-  transition: box-shadow 0.3s ease;
-}
-.card:hover {
-  box-shadow: 0 6px 20px rgb(13 59 102 / 0.2);
 }
 
 /* Products */
