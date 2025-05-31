@@ -59,24 +59,32 @@ main {
   padding: 0 1rem;
 }
 .full-section {
-  position: relative;
-  overflow: hidden;
-  z-index: 0;
-}
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    width: 100vw;
+  }
 
-.full-section::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  opacity: 0.08; /* Adjust to desired faintness */
-  z-index: -1;
-}
+  .full-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.08;
+    z-index: -1;
+  }
 
 /* Unique background images per section */
 #about::before {
