@@ -143,28 +143,55 @@ nav ul li a:hover {
   z-index: -1;
 }
 
-/* Unique background images per section with fade out on About */
+/* Unique background images per section */
 #about::before {
   background-image: url('images/about_us_1.jpg');
-  /* fade out bottom for parallax overlap */
-  mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
-  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
-  opacity: 1; /* full opacity */
+  position: absolute;
+  content: "";
+  top: 0; left: 0; right: 0; bottom: 0;
   z-index: -1;
 }
-#products::before {
-  background-image: url('images/products.jpg');
-}
-#contact::before {
-  background-image: url('images/contact_us.jpg');
+#about {
+  position: relative;
+  z-index: 1;
+  padding-bottom: 50vh; /* space for parallax overlap */
 }
 
-/* Parallax feature css */
-.rellax-wrapper {
-  height: 150vh; /* 1.5 times viewport height */
-  margin-top: -50vh; /* overlap halfway up the About section */
+#products::before {
+  background-image: url('images/products.jpg');
+  position: absolute;
+  content: "";
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: -1;
+}
+#products {
   position: relative;
-  z-index: 0; /* behind content but above about background fade-out */
+  z-index: 1;
+  padding-top: 50vh; /* space for parallax overlap */
+}
+
+#contact::before {
+  background-image: url('images/contact_us.jpg');
+  position: absolute;
+  content: "";
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: -1;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.38;
+}
+#contact {
+  position: relative;
+  z-index: 1;
+}
+
+/* Parallax feature css*/
+.rellax-wrapper {
+  height: 150vh; /* taller: 1.5 times viewport */
+  margin-top: -50vh; /* pull it up by half viewport height */
+  position: relative;
+  z-index: 0; /* make sure it's behind text */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -181,22 +208,15 @@ nav ul li a:hover {
   align-items: center;
   justify-content: center;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-}
-
-#about {
-  padding-bottom: 50vh; /* reserve space for parallax overlap */
   position: relative;
-  z-index: 1;
+  z-index: 0; /* behind about and products */
 }
-
-#products {
-  padding-top: 50vh; /* space for parallax overlap */
-  position: relative;
-  z-index: 1;
+#about, .rellax-wrapper, #products {
+  margin-bottom: 0;
 }
 
 /* --test-- */
-/* Remove outlines after testing */
+/* Remove or comment out these outlines for production */
 #about, .rellax-wrapper, #products {
   /* outline: 2px solid red; */
 }
@@ -338,9 +358,9 @@ footer {
   align-items: center;
   justify-content: center;
   box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  cursor: pointer;
   transition: background-color 0.3s ease;
-  z-index: 1001;
-  text-decoration: none;
+  z-index: 1100;
 }
 .whatsapp-button:hover {
   background-color: #1ebe57;
