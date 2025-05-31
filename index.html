@@ -50,6 +50,13 @@
       </div>
     </section>
 
+    <!-- Parallax feature implemented here -->
+    <section class="rellax-wrapper">
+      <div class="rellax parallax-layer" data-rellax-speed="-3">
+        <h2>Precision. Performance. Power.</h2>
+      </div>
+    </section>
+
     <section id="products" class="card fade-in full-section" tabindex="0" aria-label="Our Product Range">
       <h2>Products</h2>
       <ul class="product-list" role="list">
@@ -114,5 +121,10 @@
 
   <!-- Link to external JS -->
   <script src="scripts.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js"></script>
+  <script>
+    // Initialize Rellax
+    var rellax = new Rellax('.rellax');
+  </script>
 </body>
 </html>
