@@ -194,6 +194,12 @@ p {
   margin-top: auto;
 }
 
+.product-list img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
 /* Contact form */
 form {
   display: flex;
