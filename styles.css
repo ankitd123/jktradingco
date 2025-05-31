@@ -143,9 +143,14 @@ nav ul li a:hover {
   z-index: -1;
 }
 
-/* Unique background images per section */
+/* Unique background images per section with fade out on About */
 #about::before {
   background-image: url('images/about_us_1.jpg');
+  /* fade out bottom for parallax overlap */
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
+  opacity: 1; /* full opacity */
+  z-index: -1;
 }
 #products::before {
   background-image: url('images/products.jpg');
@@ -154,12 +159,12 @@ nav ul li a:hover {
   background-image: url('images/contact_us.jpg');
 }
 
-/* Parallax feature css*/
+/* Parallax feature css */
 .rellax-wrapper {
-  height: 150vh; /* taller: 1.5 times viewport */
-  margin-top: -50vh; /* pull it up by half viewport height */
+  height: 150vh; /* 1.5 times viewport height */
+  margin-top: -50vh; /* overlap halfway up the About section */
   position: relative;
-  z-index: 0; /* make sure it's behind text */
+  z-index: 0; /* behind content but above about background fade-out */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -177,29 +182,26 @@ nav ul li a:hover {
   justify-content: center;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
-#about, .rellax-wrapper {
-  margin-bottom: 0;
-}
+
 #about {
-  padding-bottom: 50vh; /* add space so content doesn’t hide behind parallax */
+  padding-bottom: 50vh; /* reserve space for parallax overlap */
   position: relative;
   z-index: 1;
 }
 
 #products {
-  padding-top: 50vh; /* space before products content */
+  padding-top: 50vh; /* space for parallax overlap */
   position: relative;
   z-index: 1;
 }
 
-
 /* --test-- */
+/* Remove outlines after testing */
 #about, .rellax-wrapper, #products {
-  outline: 2px solid red;
+  /* outline: 2px solid red; */
 }
 
 /* ------ */
-
 
 html {
   scroll-behavior: smooth;
