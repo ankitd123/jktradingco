@@ -4,11 +4,20 @@ document.addEventListener("DOMContentLoaded", () => {
   const loader = document.getElementById("loader");
   const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
 
-  if (connection && (connection.saveData || connection.effectiveType.includes('2g') || connection.effectiveType === 'slow-2g')) {
-    // Replace images with low-res versions
-    document.querySelectorAll('img[data-low]').forEach(img => {
-      img.src = img.dataset.low;
-    });
+  if (connection) {
+    const type = connection.effectiveType;
+    const saveData = connection.saveData;
+
+    // Match for slow networks or data-saver mode
+    const isLowBandwidth = saveData || ['slow-2g', '2g', '3g', '4g'].includes(type);
+
+    if (isLowBandwidth) {
+      document.querySelectorAll('img[data-low]').forEach(img => {
+        if (img.dataset.low) {
+          img.src = img.dataset.low;
+        }
+      });
+    }
   }
 
   form.addEventListener("submit", function (e) {
