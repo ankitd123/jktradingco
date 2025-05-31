@@ -128,6 +128,9 @@ nav ul li a:hover {
   padding-left: 1rem;
   padding-right: 1rem;
   box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+  padding: 1rem;
+  border-radius: 5px;
 }
 .full-section::before {
   content: "";
@@ -139,9 +142,11 @@ nav ul li a:hover {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: 0.38;
+  background-attachment: fixed;
+  /* opacity: 0.38; */
   z-index: -1;
 }
+
 /* Unique background images per section */
 #about::before {
   background-image: url('images/about_us_1.jpg');
