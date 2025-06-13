@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="theme-color" content="#0d3b66">
   
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PY9KRFVVD5"></script>
@@ -11,9 +12,34 @@
     gtag('js', new Date());
     gtag('config', 'G-PY9KRFVVD5');
   </script>
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "J.K. Steels",
+    "url": "https://jktradingco.github.io",
+    "logo": "https://jktradingco.github.io/images/main_logo.png",
+    "description": "Supplier and exporter of machinery spare parts and steel products.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Mumbai",
+      "addressCountry": "IN"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+91-9324000343",
+      "contactType": "Customer Service"
+    },
+    "sameAs": [
+      "https://wa.me/919324000343"
+    ]
+  }
+  </script>
   
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="icon" href="favicon.png" type="image/png" sizes="32x32">
   <link rel="shortcut icon" href="favicon.png" type="image/png">
 
   <title>J.K. Steels - Machinery Spare Parts Exporter</title>
@@ -25,10 +51,19 @@
 </head>
 <body>
   <header>
-    <a href="#about" class="logo">
-      <img src="images/jksteels.png" alt="J.K. Steels">
-    </a>
-    <nav aria-label="Primary navigation">
+    <div class="header-left">
+      <a href="#about" class="logo">
+        <img src="images/main_logo.png" alt="J.K. Steels">
+      </a>
+    </div>
+
+    <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-nav">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="nav-menu" aria-label="Primary navigation">
       <ul>
         <li><a href="#about">About</a></li>
         <li><a href="#products">Products</a></li>
@@ -37,23 +72,53 @@
     </nav>
   </header>
 
+
+
   <main>
     <section id="about" class="card fade-in full-section" tabindex="0" aria-label="About J.K. Steels">
       <div class="content-wrapper">
         <h2>About Us</h2>
         <p>
-          Established in 1989, J. K. Steels is a trusted Distributor, Supplier, Wholesaler, and Retailer of stainless steel pipe fittings, ball bearings, MS plates, angles, rounds, etc. Based in Mumbai, India, we have built a reputation for providing reliable products and consistent service to our customers.
+          Established in 1989, J. K. Steels is a trusted stockist and dealer of all type of Mild Steel, Alloy, Steels products. Based in Mumbai, India, we have built a reputation for providing reliable products to our customers.
         </p>
         <p>
           We cater to clients across India and internationally, offering quality materials at competitive prices with a focus on timely delivery and customer satisfaction.
         </p>
       </div>
+
+      <div class="marquee-section center">
+          <h4>Brand products we supply</h4>
+          <div class="marquee-track-orig">
+              <img src="images/brands/jindal.png" alt="Jindal Steel" />
+              <img src="images/brands/vigaz.png" alt="VSP" />
+              <img src="images/brands/tata.png" alt="Tata Steel" />
+              <img src="images/brands/sail.png" alt="SAIL" />
+              <img src="images/brands/vedanta.png" alt="Vedanta Steel" />
+              <img src="images/brands/nmdc.png" alt="NMDC Steel" />
+              <!-- Duplicate for smooth loop -->
+              <img src="images/brands/jindal.png" alt="Jindal Steel" />
+              <img src="images/brands/vigaz.png" alt="VSP" />
+              <img src="images/brands/tata.png" alt="Tata Steel" />
+              <img src="images/brands/sail.png" alt="SAIL" />
+              <img src="images/brands/vedanta.png" alt="Vedanta Steel" />
+              <img src="images/brands/nmdc.png" alt="NMDC Steel" />
+            </div>
+        </div>
     </section>
 
     <!-- Parallax feature implemented here -->
-    <section class="rellax-wrapper">
-      <div class="rellax parallax-layer" data-rellax-speed="-10">
-        <h2>Precision. Performance. Power.</h2>
+    <section class="rellax-wrapper rellax-wrapper-1">
+      <div class="rellax parallax-layer parallax-layer-frame parallax-layer-bg">
+        <section class="parallax-points" data-rellax-speed="-2">
+          <div class="point"><img class="relax-icon" src="images/misc/certified.png">Certified Steel</div>
+          <div class="point"><img class="relax-icon" src="images/misc/bulk-supply.png">Bulk Supply</div>
+          <div class="point"><img class="relax-icon" src="images/misc/fast-dispatch.png">Fast Dispatch</div>
+          <div class="point"><img class="relax-icon" src="images/misc/trusted.png">Trusted Partner</div>
+          <div class="point"><img class="relax-icon" src="images/misc/international-delivery.png">International Reach</div>
+          <div class="point"><img class="relax-icon" src="images/misc/quality.png">Proven Quality</div>
+          <div class="point"><img class="relax-icon" src="images/misc/client-focused.png">Client-Focused</div>
+          <div class="point"><img class="relax-icon" src="images/misc/industrial-grade.png">Industrial Grade</div>
+        </section>
       </div>
     </section>
 
@@ -65,19 +130,27 @@
           <div class="product-name">M S Flats</div>
         </li>
         <li>
+          <img src="images/products/ms_channel.jpg" data-low="images/products/low/ms_channel.jpg" alt="M S Flats" loading="lazy">
+          <div class="product-name">M S Channels</div>
+        </li>
+        <li>
           <img src="images/products/ms_plates.jpg" data-low="images/products/low/ms_plates.jpg" alt="M S Plates" loading="lazy">
           <div class="product-name">M S Plates</div>
         </li>
         <li>
-          <img src="images/products/ms_round.jpg" data-low="images/products/low/ms_round.jpg" alt="M S Round" loading="lazy">
-          <div class="product-name">M S Round</div>
+          <img src="images/products/ms_pipe.jpg" data-low="images/products/low/ms_pipe.jpg" alt="M S Pipe" loading="lazy">
+          <div class="product-name">M S Pipe</div>
         </li>
         <li>
           <img src="images/products/ms_i_beam.jpg" data-low="images/products/low/ms_i_beam.jpg" alt="M S I Beam" loading="lazy">
           <div class="product-name">M S I Beam</div>
         </li>
         <li>
-          <img src="images/products/ms_angle.jpg" data-low="images/products/low/ms_angle.jpg" alt="M S Angle" loading="lazy">
+          <img src="images/products/ms_round.jpg" data-low="images/products/low/ms_round.jpg" alt="Round Bar" loading="lazy">
+          <div class="product-name">Round Bar</div>
+        </li>
+        <li>
+          <img src="images/products/ms_angle.png" data-low="images/products/low/ms_angle.png" alt="M S Angle" loading="lazy">
           <div class="product-name">M S Angle</div>
         </li>
         <li>
@@ -87,44 +160,121 @@
       </ul>
     </section>
 
+
+    <section class="rellax-wrapper rellax-wrapper-2">
+      <div class="rellax parallax-layer plx-2-adj">
+         <div class="parallax-header">Our Product Applications</div>
+          <div class="marquee-wrapper">
+             <div class="marquee-track">
+                <div class="marquee-item">
+                  <img src="images/applications/bag-conversion.png" alt="Bag Conversion Machinery" />
+                  <div class="caption">Bag Conversion</div>
+                </div>
+                <div class="marquee-item">
+                    <img src="images/applications/falling-film-evaporator.png" alt="Falling Film Evaporator" />
+                  <div class="caption">Falling Film Evaporator</div>
+                </div>
+                <div class="marquee-item">
+                    <img src="images/applications/plastic-injection-moulding.png" alt="Plastic Injection Moulding" />
+
+                  <div class="caption">Injection Moulding</div>
+                </div>
+                <div class="marquee-item">
+                    <img src="images/applications/plastic-recycling.png" alt="Plastic Recycling Machinery" />
+
+                  <div class="caption">Plastic Recycling</div>
+                </div>
+                <div class="marquee-item">
+                    <img src="images/applications/tube-heat-exchanger.png" alt="Tube Heat Exchanger" />
+
+                  <div class="caption">Heat Exchanger &nbsp;&nbsp;&nbsp;</div>
+                </div>
+
+                <!-- Duplicate for smooth loop -->
+                
+                <div class="marquee-item">
+                  <img src="images/applications/bag-conversion.png" alt="Bag Conversion Machinery" />
+                  <div class="caption">Bag Conversion</div>
+                </div>
+                <div class="marquee-item">
+                    <img src="images/applications/falling-film-evaporator.png" alt="Falling Film Evaporator" />
+                  <div class="caption">Falling Film Evaporator</div>
+                </div>
+                <div class="marquee-item">
+                    <img src="images/applications/plastic-injection-moulding.png" alt="Plastic Injection Moulding" />
+
+                  <div class="caption">Injection Moulding</div>
+                </div>
+                <div class="marquee-item">
+                    <img src="images/applications/plastic-recycling.png" alt="Plastic Recycling Machinery" />
+
+                  <div class="caption">Plastic Recycling</div>
+                </div>
+                <div class="marquee-item">
+                    <img src="images/applications/tube-heat-exchanger.png" alt="Tube Heat Exchanger" />
+                  <div class="caption">Heat Exchanger &nbsp;&nbsp;&nbsp;</div>
+                </div>
+
+            </div>
+          </div> 
+      </div>
+    </section> 
+
     <section id="contact" class="card fade-in full-section" tabindex="0" aria-label="Contact J.K. Steels">
-      <h2>Contact Us</h2>
-      <form id="contact-form" action="https://formspree.io/f/mrbkzkdl" method="POST" novalidate>
-        <label for="name">Name*</label>
-        <input id="name" name="name" type="text" required aria-required="true" placeholder="Your full name" />
+      <div class="contact-class">
+        <h2>Contact Us</h2>
+        <form id="contact-form" action="https://formspree.io/f/mrbkzkdl" method="POST" novalidate>
+          <label for="name">Name*</label>
+          <input id="name" name="name" type="text" required aria-required="true" placeholder="Your full name" />
 
-        <label for="email">Email*</label>
-        <input id="email" name="email" type="email" required aria-required="true" placeholder="your.email@example.com" />
+          <label for="email">Email*</label>
+          <input id="email" name="email" type="email" required aria-required="true" placeholder="your.email@example.com" />
 
-        <label for="phone">Phone</label>
-        <input id="phone" name="phone" type="tel" placeholder="+91 12345 67890" />
+          <label for="phone">Phone</label>
+          <input id="phone" name="phone" type="tel" placeholder="+91 12345 67890" />
 
-        <label for="message">Message*</label>
-        <textarea id="message" name="message" rows="5" required aria-required="true" placeholder="Write your message here"></textarea>
+          <label for="message">Message*</label>
+          <textarea id="message" name="message" rows="5" required aria-required="true" placeholder="Write your message here"></textarea>
 
-        <button type="submit">Send Message</button>
-        <div id="form-status" role="alert" aria-live="polite"></div>
-      </form>
+          <button type="submit">Send Message</button>
+          <div id="form-status" role="alert" aria-live="polite"></div>
+        </form>
+      </div>
     </section>
+
+    <!-- Products Image overlay section -->
+    <div id="image-modal" class="image-modal">
+      <div class="modal-inner">
+        <img class="modal-content" id="modal-image" />
+        <div class="modal-caption" id="modal-caption"></div>
+      </div>
+    </div>
+
   </main>
 
   <footer>
     &copy; 2025 J.K. Steels | Mumbai, India
   </footer>
 
-  <a href="https://wa.me/919324000343" class="whatsapp-button" target="_blank" aria-label="Chat with us on WhatsApp">&#x1F4AC;</a>
+  <a href="https://wa.me/919324000343" class="whatsapp-float" target="_blank" rel="noopener">
+    <img src="images/whatsapp.svg" alt="WhatsApp" width="50" height="50">
+  </a>
 
   <!-- Loader overlay -->
   <div id="loader" aria-hidden="true">
     <div class="spinner" role="status" aria-label="Loading"></div>
   </div>
 
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+
   <!-- Link to external JS -->
-  <script src="scripts.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js"></script>
   <script>
     // Initialize Rellax
-    var rellax = new Rellax('.rellax');
+    var rellax = new Rellax('.rellax, .parallax-marquee');
   </script>
+  <script src="scripts.js" defer></script>
 </body>
 </html>
