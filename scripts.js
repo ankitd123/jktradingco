@@ -24,15 +24,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const loader = document.getElementById("loader");
   const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
 
-  if (navigator.connection) {
-    console.log("Effective Connection Type:", navigator.connection.effectiveType);
-    console.log("Estimated Downlink (Mbps):", navigator.connection.downlink);
-    console.log("RTT (ms):", navigator.connection.rtt);
-    console.log("Save Data:", navigator.connection.saveData);
-  } else {
-    console.log("Network Information API not supported.");
-  }
-
   if (connection) {
     const type = connection.effectiveType;
     const saveData = connection.saveData;
