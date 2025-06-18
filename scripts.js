@@ -152,4 +152,27 @@ document.addEventListener("DOMContentLoaded", () => {
     overlayText.textContent = "";
     body.style.overflow = "";
   });
+
+  // Smooth scroll without hash update
+  document.querySelectorAll('a[data-scroll]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    const targetId = this.getAttribute('data-scroll');
+    const targetEl = document.getElementById(targetId);
+    const headerOffset = 20; // adjust if needed
+
+    if (targetEl) {
+      const elementPosition = targetEl.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.scrollY - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+
+      history.pushState(null, "", " ");
+    }
+  });
+});
+
 });

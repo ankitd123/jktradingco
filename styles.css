@@ -240,6 +240,7 @@ h4 {
   flex-direction: column;
   justify-content: center;
   z-index: 2;
+  scroll-margin-top: 200px;
   box-shadow:
     0 10px 20px rgba(0, 0, 0, 0.15),
     0 25px 45px rgba(0, 0, 0, 0.25);
