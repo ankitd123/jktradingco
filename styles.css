@@ -996,6 +996,27 @@ footer {
     margin-left: auto;
     padding: 10px;
   }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  .footer-left, .footer-right {
+    width: 100%;
+  }
+
+  .footer-right p {
+    margin: 0.2rem 0;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+  }
 }
 
 /* Tablets portrait (601px to 767px) */
