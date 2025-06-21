@@ -64,6 +64,13 @@ section {
   margin-bottom: 1rem;
 }
 
+.subtle-section {
+  color: #ffd84d;
+  font-style: italic;
+  font-size: 1.25rem;
+  margin: 0;
+}
+
 h2 {
   font-size: 2rem;
   display: inline-block;
@@ -865,6 +872,12 @@ footer {
     font-size: 1.1rem;
     margin-bottom: 1rem;
   }
+
+  .subtle-section {
+    font-size: 0.8rem;
+    margin: 0;
+  }
+
   h2 {
     font-size: 1.3rem;
     margin-bottom: 1rem;

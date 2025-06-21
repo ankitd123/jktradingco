@@ -159,7 +159,7 @@ document.addEventListener("DOMContentLoaded", () => {
     e.preventDefault();
     const targetId = this.getAttribute('data-scroll');
     const targetEl = document.getElementById(targetId);
-    const headerOffset = 20; // adjust if needed
+    const headerOffset = 50; // adjust if needed
 
     if (targetEl) {
       const elementPosition = targetEl.getBoundingClientRect().top;
